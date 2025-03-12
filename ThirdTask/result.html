@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список сотрудников</title>
+  </head>
+  <body>
+    <h1>Список сотрудников</h1>
+    <ul>
+      <% var colls = XQuery("for $elem in collaborators return $elem/fullname")
+      %> <% for(el in colls) { %>
+      <p><%= el %></p>
+      <% } %>
+    </ul>
+  </body>
+</html>
